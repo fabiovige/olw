@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -37,4 +38,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/beers', fn() => 'Olá mundo!')->middleware(['auth']);
+Route::get('/beers', [BeerController::class, 'index'])
+    ->middleware(['auth']);

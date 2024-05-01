@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Comandos utilizados no dezenvolvimento
+
+```
+composer create-project laravel/laravel:^9.0 olw-app
+
+composer require laravel/sail --dev
+
+php artisan sail:install --with=mysql,redis,minio,mailpit
+
+sail composer require laravel/breeze --dev
+
+sail artisan breeze:install vue
+
+sail artisan migrate
+
+sail php artisan make:controller BeerController
+
+```
